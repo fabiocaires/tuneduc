@@ -1,0 +1,47 @@
+@import "mixins";
+
+// reset
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+    float: left;
+}
+h1, h2, h3, h4, h5, h6, p{
+    margin: 0;
+    padding: 0;
+}
+
+// fonts
+
+@include font-face(Calibri, 400, fonts/Calibri);
+@include font-face(Calibri-Bold, 700, fonts/Calibri-Bold);
+@include font-face(HelveticaNeue, 400, fonts/HelveticaNeue);
+@include font-face(HelveticaNeue-Bold, 700, fonts/HelveticaNeueLTStd-Bd);
+@include font-face(HelveticaNeue-Lite, 300, fonts/HelveticaNeueLTStd-Lt);
+@include font-face(HelveticaNeue-Thin, 100, fonts/HelveticaNeueLTStd-Th);
+@include font-face(Tahoma, 400, fonts/Tahoma);
+@include font-face(Tahoma-Bold, 700, fonts/Tahoma-Bold);
+
+// color variables 
+
+$menu-link:   #000000;
+$menu-bg:     #ffffff;
+$menu-border: #000000;
+
+$banner-h:    #f7951d;
+$banner-p:    #000000;
+
+$thumb-text:  #ffffff;
+$thumb-bg:    #ec7329;
+$thumb-border-active: #ffffff;
+
+
+// Breakpoints for media queries
+
+$breakpoint-phone: 320px;
+$breakpoint-tablet: 768px;
+$breakpoint-medium: 1024px;
+$breakpoint-large: 1280px;
