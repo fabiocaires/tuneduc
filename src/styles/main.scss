@@ -34,6 +34,28 @@
     max-width: 1200px;
     overflow: hidden;
     width: 100%;
+    &__arrow{
+        box-shadow: 4px 4px 10px #cccccc; // para melhorar a leitura no fundo branco
+        display: none;
+        float: left;
+        height: 66px;
+        opacity: 0.6;
+        position: absolute;
+        top: 280px;
+        width: 50px;
+        z-index: 3;
+        &--left{
+            background: url('../img/arrow-left.png') center center no-repeat;
+            left: 100px;
+        }
+        &--right{
+            background: url('../img/arrow-right.png') center center no-repeat;
+            right: 100px;
+        }
+        &:hover{
+            opacity: 1;
+        }
+    }
     &__image{
         position: absolute;
         top: 20px;
@@ -46,8 +68,12 @@
 }
 .banner-item{
     display: none;
+    opacity: 0;
     position: relative;
     width: 100%;
+    &--is-show{
+        display: block;
+    }
 }
 .banner-text{
     position: absolute;
@@ -213,6 +239,9 @@
         width: $breakpoint-medium;
     }
     .menu{
+        display: block;
+    }
+    .banner__arrow{
         display: block;
     }
     .banner__image{

@@ -25,7 +25,7 @@ gulp.task('scripts', function(){
         .pipe(rename({suffix: '.min'}))
         .pipe(uglify())
         .pipe(gulp.dest('build/assets/js'))
-        .pipe(notify({ message: 'Scripts task complete' }));
+        // .pipe(notify({ message: 'Scripts task complete' }));
 });
 
 gulp.task('images', function() {

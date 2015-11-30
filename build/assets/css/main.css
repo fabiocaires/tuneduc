@@ -507,6 +507,28 @@ h1, h2, h3, h4, h5, h6, p {
   overflow: hidden;
   width: 100%;
 }
+.banner__arrow {
+  box-shadow: 4px 4px 10px #cccccc;
+  display: none;
+  float: left;
+  height: 66px;
+  opacity: 0.6;
+  position: absolute;
+  top: 280px;
+  width: 50px;
+  z-index: 3;
+}
+.banner__arrow--left {
+  background: url("../img/arrow-left.png") center center no-repeat;
+  left: 100px;
+}
+.banner__arrow--right {
+  background: url("../img/arrow-right.png") center center no-repeat;
+  right: 100px;
+}
+.banner__arrow:hover {
+  opacity: 1;
+}
 .banner__image {
   position: absolute;
   top: 20px;
@@ -516,8 +538,12 @@ h1, h2, h3, h4, h5, h6, p {
 
 .banner-item {
   display: none;
+  opacity: 0;
   position: relative;
   width: 100%;
+}
+.banner-item--is-show {
+  display: block;
 }
 
 .banner-text {
@@ -688,6 +714,10 @@ h1, h2, h3, h4, h5, h6, p {
   }
 
   .menu {
+    display: block;
+  }
+
+  .banner__arrow {
     display: block;
   }
 
