@@ -5,12 +5,13 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="author" content="">
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
     <title>Tuneduc Front-end Test</title>
     <link href="build/assets/css/main.min.css" rel="stylesheet" type="text/css">
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-    <script src="build/assets/js/main.js"></script>
+    <script src="build/assets/js/main.min.js"></script>
   </head>
   <body>
     <header class="bgheader"></header>
@@ -24,6 +25,7 @@
             </ul>
         </nav>
         <section class="banner">
+            <div id="banner-mask"></div>
             <a href="#" id="arrow-left" class="banner__arrow banner__arrow--left"></a>
             <a href="#" id="arrow-right" class="banner__arrow banner__arrow--right"></a>
             <ul>
@@ -80,33 +82,33 @@
         <section class="thumbs">
             <ul>
                 <li>
-                    <a href="#" class="thumbs__square">
-                        <p class="thumbs__text">Sistema TLS</p>
-                        <img class="thumbs__item" src="build/assets/img/thumbs/t01.png">
+                    <a href="#" class="thumbs-square">
+                        <p class="thumbs-square__text">Sistema TLS</p>
+                        <img class="thumbs-square__item" src="build/assets/img/thumbs/t01.png">
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="thumbs__square">
-                        <p class="thumbs__text">Occipitocervical</p>
-                        <img class="thumbs__item" src="build/assets/img/thumbs/t02.png">
+                    <a href="#" class="thumbs-square">
+                        <p class="thumbs-square__text">Occipitocervical</p>
+                        <img class="thumbs-square__item" src="build/assets/img/thumbs/t02.png">
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="thumbs__square">
-                        <p class="thumbs__text">Placa Cervical</p>
-                        <img class="thumbs__item" src="build/assets/img/thumbs/t03.png">
+                    <a href="#" class="thumbs-square">
+                        <p class="thumbs-square__text">Placa Cervical</p>
+                        <img class="thumbs-square__item" src="build/assets/img/thumbs/t03.png">
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="thumbs__square">
-                        <p class="thumbs__text">Anterolateral</p>
-                        <img class="thumbs__item" src="build/assets/img/thumbs/t04.png">
+                    <a href="#" class="thumbs-square">
+                        <p class="thumbs-square__text">Anterolateral</p>
+                        <img class="thumbs-square__item" src="build/assets/img/thumbs/t04.png">
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="thumbs__square">
-                        <p class="thumbs__text">Cilindro Expansivo</p>
-                        <img class="thumbs__item" src="build/assets/img/thumbs/t05.png">
+                    <a href="#" class="thumbs-square">
+                        <p class="thumbs-square__text">Cilindro Expansivo</p>
+                        <img class="thumbs-square__item" src="build/assets/img/thumbs/t05.png">
                     </a>
                 </li>
             </ul>

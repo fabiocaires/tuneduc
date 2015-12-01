@@ -1,11 +1,10 @@
-// Vanilla JS :)
-
+// Vanilla + hammer.js :)
 (function(){
     document.addEventListener( 'DOMContentLoaded', function () {
         var arrowLeft = document.getElementById('arrow-left');
         var arrowRight = document.getElementById('arrow-right');
         var bannerItems = document.querySelectorAll('.banner-item');
-        var bullets = document.querySelectorAll('.thumbs__square');
+        var bullets = document.querySelectorAll('.thumbs-square');
         var maxPos = bannerItems.length -1;
         var currentPos, newPos;
         var waitingEvent = false;
@@ -13,7 +12,9 @@
         var banner = {
             animation: function(newPos){
                 addRemoveClass(bannerItems[currentPos], 'banner-item--is-show', 'remove');
+                addRemoveClass(bullets[currentPos], 'thumbs__item--is-active', 'remove');
                 addRemoveClass(bannerItems[newPos], 'banner-item--is-show', 'add');
+                addRemoveClass(bullets[newPos], 'thumbs__item--is-active', 'add');
                 fadeIn(bannerItems[newPos]);
                 currentPos = newPos;
                 waitingEvent = false;
@@ -93,6 +94,18 @@
                     el.className = el.className.replace(new RegExp('(^|\\b)' + className.split(' ').join('|') + '(\\b|$)', 'gi'),' ');
             }
         }
+        
+        
+        // Detectando gesto mobile
+        var bannerMask = new Hammer.Manager(document.querySelectorAll("#banner-mask"));
+        bannerMask.add(new Hammer.Pan({ threshold: 0, pointers: 0 }));
+        
+        bannerMask.on("panleft", function(){
+            moveCarousel(0);   
+        });
+        bannerMask.on("panright", function(){
+            moveCarousel(1);   
+        });
         
     }, false );      
 })();
