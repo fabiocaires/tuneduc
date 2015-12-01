@@ -18,10 +18,19 @@
 
 .bgheader{
     background: url('../img/bg-header.png') center center no-repeat;
-    height: 80px;
+    height: 60px;
     position: absolute;
     width: 100%;
     z-index: 0;
+    &__menu-icon{
+        background: url('../img/mobile-menu.png') center center no-repeat;
+        float: left;
+        height: 40px;
+        left: 20px;
+        position: relative;
+        top: 10px;
+        width: 40px;
+    }
 }
 
 .bgfooter{
@@ -112,6 +121,31 @@
         z-index: 4;
     }
 }
+.banner-text{
+    margin: 20px 0;
+    height: auto;
+    text-transform: uppercase;
+    width: auto;
+    &__h1{
+        color: $banner-h;
+        font-family: 'HelveticaNeue-Thin';
+        font-size: 60px;
+        font-weight: 100;
+    }
+    &__h2{
+        color: $banner-h;
+        font-family: 'HelveticaNeue-Lite';
+        font-size: 22px;
+        font-weight: 300;
+    }
+    &__p{
+        color: $banner-p;
+        font-family: 'HelveticaNeue';
+        font-size: 13px;
+        font-weight: 400;
+        padding: 10px;
+    }
+}
 .menu{
     display: none;
     float: right;
@@ -180,12 +214,14 @@
 
 @media (min-width: $breakpoint-phone){
     .banner-item__image{
-        width: 100%;
+        height: 280px;
+        width: auto;
     }
 }
 @media (min-width: $breakpoint-tablet){
     .banner-item__image{
-        width: $breakpoint-tablet;
+        height: 400px;
+        width: auto;
     }
 }
 @media (min-width: $breakpoint-medium){
@@ -194,6 +230,9 @@
     }
     .bgheader{
         height: 260px;
+        &__menu-icon{
+            display: none;
+        }
     }
     .container{
         background: url('../img/bg-container.png') center center no-repeat;
@@ -209,6 +248,7 @@
     .banner-item{
         text-align: initial;
         &__image{
+            height: auto;
             position: absolute;
             width: initial;
             &--1{
@@ -237,33 +277,21 @@
         }
     }
     .banner-text{
+        margin: 0;
         position: absolute;
-        text-transform: uppercase;
         z-index: 2;
         &__h1{
-            color: $banner-h;
-            font-family: 'HelveticaNeue-Thin';
-            font-size: 60px;
-            font-weight: 100;
+
         }
         &__h2{
-            color: $banner-h;
             float: right;
-            font-family: 'HelveticaNeue-Lite';
-            font-size: 22px;
-            font-weight: 300;
             &--1{
                 float: left;
             }
         }
         &__p{
             clear: both;
-            color: $banner-p;
             float: right;
-            font-family: 'HelveticaNeue';
-            font-size: 13px;
-            font-weight: 400;
-            padding: 10px;
             text-align: center;
             width: 80%;
             &--2{
