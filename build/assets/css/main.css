@@ -499,8 +499,10 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .banner {
+  box-sizing: border-box;
   height: 660px;
   margin: 0 auto;
+  padding: 1px;
   position: relative;
   top: -1px;
   max-width: 1200px;
@@ -512,28 +514,23 @@ h1, h2, h3, h4, h5, h6, p {
   display: none;
   float: left;
   height: 66px;
-  opacity: 0.6;
+  opacity: 0.7;
   position: absolute;
-  top: 280px;
+  top: 275px;
   width: 50px;
-  z-index: 3;
+  z-index: 9;
 }
 .banner__arrow--left {
   background: url("../img/arrow-left.png") center center no-repeat;
-  left: 100px;
+  left: 130px;
 }
 .banner__arrow--right {
   background: url("../img/arrow-right.png") center center no-repeat;
-  right: 100px;
+  right: 130px;
 }
 .banner__arrow:hover {
+  box-shadow: 4px 4px 10px #eeeeee;
   opacity: 1;
-}
-.banner__image {
-  position: absolute;
-  top: 20px;
-  max-width: 1200px;
-  width: 150%;
 }
 
 .banner-item {
@@ -544,6 +541,57 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .banner-item--is-show {
   display: block;
+}
+.banner-item__baloon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.banner-item__baloon--1 {
+  left: 580px;
+  top: 25px;
+}
+.banner-item__baloon--2 {
+  left: 330px;
+  top: 25px;
+}
+.banner-item__baloon--3 {
+  left: 430px;
+  top: 25px;
+}
+.banner-item__baloon--4 {
+  left: 390px;
+  top: 40px;
+}
+.banner-item__baloon--5 {
+  left: 380px;
+  top: 35px;
+}
+.banner-item__image {
+  position: absolute;
+  top: 20px;
+  z-index: 4;
+}
+.banner-item__image--1 {
+  left: 0;
+  top: 105px;
+}
+.banner-item__image--2 {
+  left: 90px;
+  top: 150px;
+}
+.banner-item__image--3 {
+  left: 210px;
+  top: 120px;
+}
+.banner-item__image--4 {
+  left: 220px;
+  top: 120px;
+}
+.banner-item__image--5 {
+  left: 240px;
+  top: 140px;
 }
 
 .banner-text {
@@ -593,7 +641,7 @@ h1, h2, h3, h4, h5, h6, p {
 }
 .banner-text--1 {
   left: 650px;
-  top: 90px;
+  top: 110px;
   width: 370px;
 }
 .banner-text--2 {
@@ -602,18 +650,18 @@ h1, h2, h3, h4, h5, h6, p {
   width: 570px;
 }
 .banner-text--3 {
-  left: 510px;
-  top: 90px;
+  left: 500px;
+  top: 120px;
   width: 490px;
 }
 .banner-text--4 {
   left: 490px;
-  top: 90px;
+  top: 120px;
   width: 490px;
 }
 .banner-text--5 {
-  left: 410px;
-  top: 90px;
+  left: 420px;
+  top: 115px;
   width: 600px;
 }
 
